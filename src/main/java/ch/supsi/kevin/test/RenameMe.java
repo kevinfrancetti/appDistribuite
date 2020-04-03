@@ -1,27 +1,30 @@
-package ch.supsi.kevin.old;
+package ch.supsi.kevin.test;
 
 import java.io.*;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class RenameMe {
+public class RenameMe{
 
-    public static void testing(){
+    public static void main(String[] args){
         System.out.println("Mannaggia");
         try {
-            URL url = new URL("http://www.supsi.ch");
-            InetAddress address = InetAddress.getByName("www.supsi.ch");
             System.out.println("===URL===");
+            URL url = new URL("http://www.supsi.ch");
             System.out.println("protocollo " + url.getProtocol());
             System.out.println("host " + url.getHost());
             System.out.println("file " + url.getFile());
             System.out.println("port " + url.getPort());
             System.out.println("default port " + url.getDefaultPort());
+
+
             System.out.println("===InetAddress===");
+            InetAddress address = InetAddress.getByName("www.supsi.ch");
             System.out.println("address " + address.getHostAddress() );
             System.out.println("canonical host name: " +  address.getCanonicalHostName());
             System.out.println("host name: " + address.getHostName());
+
             System.out.println("===CONNECTION===");
             //URLConnection con = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
